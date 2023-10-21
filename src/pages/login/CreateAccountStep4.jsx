@@ -3,21 +3,18 @@ import Fieldset from "../../components/Fieldset";
 import StepHeader from "../../components/StepHeader";
 import StepHeading from "../../components/StepHeading";
 
-function CreateAccountStep3() {
+function CreateAccountStep4() {
   return (
     <div className="bg-neutral-1000">
       <main className="flex w-full h-screen">
         <section className="flex w-full flex-shrink-0 flex-col items-start gap-3 rounded-2xl px-0.9rem pb-5">
-          <StepHeader step="3" />
+          <StepHeader step="4" />
           <div className="flex flex-col w-full gap-3 self-stretch">
-            <StepHeading text="We sent you a code" />
+            <StepHeading text="You’ll need a password" />
             <p className="text-sm font-normal leading-normal text-neutral-500">
-              Enter it below to verify janedoe@gmail.com
+              Make sure it’s 8 characters or more
             </p>
-            <Fieldset text="Verification code" type="text" />
-            <p className="text-sm font-normal flex justify-end leading-normal text-twitter-default">
-              Didn’t receive a code?
-            </p>
+            <Fieldset text="Password" type="password" />
           </div>
         </section>
       </main>
@@ -30,4 +27,4 @@ function CreateAccountStep3() {
   );
 }
 
-export default CreateAccountStep3;
+export default CreateAccountStep4;

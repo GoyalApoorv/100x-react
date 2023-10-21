@@ -41,7 +41,6 @@ export default {
         "0.9rem": "0.9375rem",
         "5.8rem": "5.8125rem",
         "13.8rem": "13.875rem",
-        "27.6rem": "27.625rem",
         "37.3rem": "37.375rem",
         "3.6rem": "3.625rem",
         "2.3rem": "2.375rem",
