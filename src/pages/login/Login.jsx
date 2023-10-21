@@ -1,19 +1,16 @@
-import SignIn from "../components/buttons/SignIn";
-import CreateAccount from "../components/buttons/CreateAccount";
+import Button from "../../components/Button";
+import Heading from "../../components/Heading";
+import Text from "../../components/Text";
 function Login() {
   return (
     <main className="flex h-screen w-full items-center">
       <section className="flex w-full flex-col gap-10 px-7">
         <section className="flex flex-col gap-3">
-          <h1 className="text-1.9rem font-bold leading-normal text-neutral-50">
-            Happening now
-          </h1>
-          <p className="text-base font-medium leading-normal text-neutral-50">
-            Join today.
-          </p>
+          <Heading text="Happening now" />
+          <Text text="Join today." />
         </section>
         <a href="../login/create-account-step-1.html">
-          <CreateAccount />
+          <Button text="Create account" variant="default" disabled={false} />
         </a>
         <div className="flex items-center">
           <hr className="mr-2 flex-grow border-t-2 border-neutral-700" />
@@ -23,11 +20,9 @@ function Login() {
           <hr className="ml-2 flex-grow border-t-2 border-neutral-700" />
         </div>
         <section className="flex flex-col gap-5">
-          <p className="text-base font-medium leading-normal text-neutral-50">
-            Already have an account?
-          </p>
+          <Text text="Already have an account?" />
           <a href="#">
-            <SignIn />
+            <Button text="Sign in" variant="outline" />
           </a>
         </section>
       </section>
