@@ -1,23 +1,64 @@
-import Login from "./pages/login/Login";
-import Header from "./components/Header";
+import Home from "./pages/Home";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import Header from "./components/Header";
 import CreateAccountStep1 from "./pages/login/CreateAccountStep1";
 import CreateAccountStep2 from "./pages/login/CreateAccountStep2";
 import CreateAccountStep3 from "./pages/login/CreateAccountStep3";
 import CreateAccountStep4 from "./pages/login/CreateAccountStep4";
-import Home from "./pages/home-feed/Home";
-import ComposeTweet from "./pages/compose-tweet/ComposeTweet";
+import { Base } from "./pages/login/templates";
+import { URLs } from "./constants";
+// import Home from "./pages/home-feed/Home";
+// import ComposeTweet from "./pages/compose-tweet/ComposeTweet";
 
+const router = createBrowserRouter([
+  {
+    path: URLs.home,
+    element: <Home />,
+  },
+  {
+    path: URLs.signUpStep1,
+    element: (
+      <Base step="1">
+        <CreateAccountStep1 />
+      </Base>
+    ),
+  },
+  {
+    path: URLs.signUpStep2,
+    element: (
+      <Base step="2">
+        <CreateAccountStep2 />
+      </Base>
+    ),
+  },
+  {
+    path: URLs.signUpStep3,
+    element: (
+      <Base step="3">
+        <CreateAccountStep3 />
+      </Base>
+    ),
+  },
+  {
+    path: URLs.signUpStep4,
+    element: (
+      <Base step="4">
+        <CreateAccountStep4 />
+      </Base>
+    ),
+  },
+]);
 
 export default function App() {
   return (
-    <div className="bg-neutral-1000">
-      {/* <Login></Login> */}
+    <div className="bg-neutral-1000 min-h-screen">
+      <RouterProvider router={router} />
       {/* <CreateAccountStep1 /> */}
       {/* <CreateAccountStep2 /> */}
       {/* <CreateAccountStep3 /> */}
       {/* <CreateAccountStep4 /> */}
       {/* <Home /> */}
-      <ComposeTweet />
+      {/* <ComposeTweet /> */}
     </div>
   );
 }

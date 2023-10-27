@@ -6,8 +6,8 @@ function Button(props) {
   const disabledStyles = {
     default: "hover:cursor-not-allowed hover:bg-neutral-50 opacity-50",
     fill: "hover:cursor-not-allowed bg-twitter-disabled hover:bg-twitter-disabled",
-    signedIn : <div>You are signed in</div>,
-    signedOut : <div>You are signed out</div>
+    signedIn: <div>You are signed in</div>,
+    signedOut: <div>You are signed out</div>,
   }[variant ?? ""]; //?? to check nullish value
 
   // return disabledStyles[isAuth?'signedIn':'signedOut']
