@@ -1,10 +1,11 @@
 import Header from "../components/Header";
-import TweetMain from "../components/TweetMain";
+import LoginMain from "../components/Login/LoginMain";
+
 function Home() {
   return (
     <>
       <Header />
-      <TweetMain />
+      <LoginMain />
     </>
   );
 }

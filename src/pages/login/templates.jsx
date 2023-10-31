@@ -1,5 +1,5 @@
 import StepHeader from "../../components/StepHeader";
-
+import PropTypes from "prop-types"; // ES6
 export const Base = ({ children, step = "1" }) => {
   return (
     <>
@@ -12,4 +12,8 @@ export const Base = ({ children, step = "1" }) => {
       <footer></footer>
     </>
   );
+};
+Base.propTypes = {
+  children: PropTypes.node,
+  step: PropTypes.string,
 };

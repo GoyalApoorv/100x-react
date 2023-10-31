@@ -1,7 +1,12 @@
-function Heading(props) {
+import PropTypes from "prop-types"; // ES6
+
+Heading.propTypes = {
+  children: PropTypes.node,
+};
+function Heading({ children }) {
   return (
     <h1 className="text-1.9rem font-bold leading-normal text-neutral-50">
-     {props.text}
+      {children}
     </h1>
   );
 }

@@ -9,7 +9,7 @@ function CreateAccountStep1() {
   return (
     <>
       <div className="flex flex-col items-start gap-5 self-stretch">
-        <StepHeading text="Create your account" />
+        <StepHeading>Create your account</StepHeading>
 
         <Fieldset text="Name" type="text" />
         <Fieldset text="Email" type="email" />
@@ -122,7 +122,9 @@ function CreateAccountStep1() {
         to={URLs.signUpStep2}
         className="fixed bottom-16 left-1/2 -translate-x-1/2 -translate-y-1/2 transform w-20.8rem"
       >
-        <Button text="Create Account" variant="default" disabled={false} />
+        <Button variant="default" disabled={false}>
+          Create Account
+        </Button>
       </Link>
     </>
   );

@@ -1,22 +1,26 @@
-import React from "react";
-import ProfileAvatar from "../../assets/profile_avatar.png";
+import Cancel from "../../assets/cancel.svg";
+import TweetInput from "../../components/TweetInput";
 
 function ComposeTweet() {
   return (
-    <div className="flex w-full items-center justify-center gap-3 px-4 py-2">
-      <img
-        className="h-9 w-9 flex-shrink-0 self-start rounded-7xl"
-        src={ProfileAvatar}
-      />
-      <textarea
-        name
-        id
-        cols={30}
-        rows={10}
-        placeholder="What's happening?"
-        className="text-base font-regular w-full resize-none bg-transparent leading-normal text-neutral-50 placeholder:text-neutral-600 focus:outline-none"
-        defaultValue={""}
-      />
+    <div>
+      <header className="flex items-center justify-between px-4 py-3">
+        <a href="../home-feed/index.html">
+          <img src={Cancel} />
+        </a>
+        <button className="inline-flex w-5.2rem items-center justify-center gap-2.5 rounded-4xl bg-twitter-default px-6 py-3 hover:bg-twitter-hover disabled:opacity-50 md:w-13.8rem md:rounded-6xl md:px-5.8rem md:py-0.9rem">
+          <span className="text-center text-base font-bold not-italic leading-normal text-neutral-50">
+            Post
+          </span>
+        </button>
+      </header>
+
+      <TweetInput />
+      <footer className="fixed bottom-0 flex items-center gap-5 px-4 py-3">
+        <p className="text-sm font-normal leading-normal text-neutral-500">
+          0/280
+        </p>
+      </footer>
     </div>
   );
 }

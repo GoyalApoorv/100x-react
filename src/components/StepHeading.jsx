@@ -1,9 +1,13 @@
-import React from "react";
+import PropTypes from "prop-types"; // ES6
 
-function StepHeading(props) {
+StepHeading.propTypes = {
+  children: PropTypes.node,
+};
+
+function StepHeading({ children }) {
   return (
     <h1 className="text-2xl font-bold leading-normal text-neutral-50">
-     {props.text}
+      {children}
     </h1>
   );
 }

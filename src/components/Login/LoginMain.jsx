@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import Button from "../components/Button";
+import Button from "../Button";
 
-import Heading from "../components/Heading";
-import Text from "../components/Text";
-import { URLs } from "../constants";
+import Heading from "../Heading";
+import Text from "../Text";
+import { URLs } from "../../constants.js";
 
 function TweetMain() {
   return (

@@ -1,5 +1,3 @@
-import ProfileAvatar from "../../assets/profile_avatar.png";
-
 import Tweet from "../../components/Tweet";
 import HomeActive from "../../assets/home-active.svg";
 import HomeInactive from "../../assets/home-inactive.svg";
@@ -10,23 +8,19 @@ import Toast from "../../components/Toast";
 import NewTweet from "../../components/NewTweetButton";
 import Header from "../../components/Header";
 import Tab from "../../components/Tab";
+import ProfileAvatar from "../../components/Avatar";
 
 function Home() {
   return (
     <div className="bg-neutral-1000">
       <header className="top-0 flex w-full flex-col items-center bg-neutral-1000">
         <section className="flex w-full items-center border-b border-neutral-700 px-4 py-5">
-          <a href="../user-profile/index.html">
-            <img
-              src={ProfileAvatar}
-              alt="Profile Picture"
-              className="sticky w-9 rounded-full"
-            />
-          </a>
+          <ProfileAvatar />
           <Header />
         </section>
-        <Tab />
+       
       </header>
+      <Tab />
       <main className="flex w-full flex-col pb-20">
         <section>
           {/* Tweets */}

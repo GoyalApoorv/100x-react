@@ -1,19 +1,20 @@
 import Home from "./pages/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import Header from "./components/Header";
 import CreateAccountStep1 from "./pages/login/CreateAccountStep1";
 import CreateAccountStep2 from "./pages/login/CreateAccountStep2";
 import CreateAccountStep3 from "./pages/login/CreateAccountStep3";
 import CreateAccountStep4 from "./pages/login/CreateAccountStep4";
 import { Base } from "./pages/login/templates";
 import { URLs } from "./constants";
-// import Home from "./pages/home-feed/Home";
-// import ComposeTweet from "./pages/compose-tweet/ComposeTweet";
+import HomeF from "./pages/home-feed/Home";
+import UserProfile from "./pages/user-profile/UserProfile";
+import EditProfile from "./pages/user-profile/EditProfile";
+import ComposeTweet from "./pages/compose-tweet/ComposeTweet";
 
 const router = createBrowserRouter([
   {
     path: URLs.home,
-    element: <Home />,
+    element: <EditProfile />,
   },
   {
     path: URLs.signUpStep1,
@@ -47,10 +48,17 @@ const router = createBrowserRouter([
       </Base>
     ),
   },
+  {
+    path: URLs.feed,
+    element: (
+      <Base step="4">
+        <CreateAccountStep4 />
+      </Base>
+    ),
+  },
 ]);
 
 export default function App() {
-  
   return (
     <div className="bg-neutral-1000 ">
       <RouterProvider router={router} />
