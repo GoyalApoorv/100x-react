@@ -50,8 +50,9 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
+  
   return (
-    <div className="bg-neutral-1000 min-h-screen">
+    <div className="bg-neutral-1000 ">
       <RouterProvider router={router} />
       {/* <CreateAccountStep1 /> */}
       {/* <CreateAccountStep2 /> */}

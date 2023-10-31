@@ -22,7 +22,9 @@ function CreateAccountStep2() {
         to={URLs.signUpStep3}
         className="fixed bottom-16 left-1/2 -translate-x-1/2 -translate-y-1/2 transform w-20.8rem"
       >
-        <Button text="Sign up" variant="fill" disabled={false} />
+        <Button variant="solid" disabled={true}>
+          Sign up
+        </Button>
       </Link>
     </>
   );
