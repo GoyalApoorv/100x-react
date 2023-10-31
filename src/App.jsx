@@ -10,6 +10,7 @@ import HomeFeed from "./pages/home-feed/Home";
 import Profile from "./pages/user-profile/UserProfile";
 import EditProfile from "./pages/user-profile/EditProfile";
 import ComposeTweet from "./pages/compose-tweet/ComposeTweet";
+import { TweetContext } from "./store";
 
 const router = createBrowserRouter([
   {
@@ -68,14 +69,10 @@ const router = createBrowserRouter([
 
 export default function App() {
   return (
-    <div className="bg-neutral-1000 ">
-      <RouterProvider router={router} />
-      {/* <CreateAccountStep1 /> */}
-      {/* <CreateAccountStep2 /> */}
-      {/* <CreateAccountStep3 /> */}
-      {/* <CreateAccountStep4 /> */}
-      {/* <Home /> */}
-      {/* <ComposeTweet /> */}
-    </div>
+    <TweetContext.Provider value={{ currentTweet: "Hello", userTweets: [] }}>
+      <div className="bg-neutral-1000 ">
+        <RouterProvider router={router} />
+      </div>
+    </TweetContext.Provider>
   );
 }

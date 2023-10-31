@@ -57,7 +57,7 @@ function Button(props) {
     textType[type],
     buttonSize[size],
   ].join(" ");
-  console.log(classes);
+
   // const classes = cn(baseStyle, variantStyles[variant]);
 
   // const classes = `${baseStyle} ${variantStyles[variant]} ${disabledStyles}`;

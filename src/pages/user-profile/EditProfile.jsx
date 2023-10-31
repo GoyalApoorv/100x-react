@@ -14,7 +14,7 @@ function EditProfile() {
       <header className="flex flex-col items-start gap-3">
         <section className="flex items-center justify-between self-stretch py-3">
           <div className="flex items-center gap-5">
-            <Link to={URLs.feed}>
+            <Link to={URLs.profile}>
               <img src={BackArrow} />
             </Link>
             <p className="text-base font-bold leading-normal text-neutral-50">

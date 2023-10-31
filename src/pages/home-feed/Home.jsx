@@ -9,6 +9,7 @@ import ProfileAvatar from "../../components/Avatar";
 import Footer from "../../components/Footer";
 
 function Home() {
+  
   return (
     <div className="bg-neutral-1000">
       <header className="top-0 flex w-full flex-col items-center bg-neutral-1000">

@@ -1,13 +1,7 @@
 import { useState } from "react";
 import ProfileAvatar from "../assets/profile_avatar.png";
 
-function TweetInput() {
-  const [tweetText, setTweetText] = useState("");
-
-  const handleTextChange = (e) => {
-    setTweetText(e.target.value); // Update tweetText when the textarea value changes
-  };
-
+function TweetInput({ tweetText, setTweetText }) {
   return (
     <div className="flex w-full items-center justify-center gap-3 px-4 py-2">
       <img
@@ -15,14 +9,12 @@ function TweetInput() {
         src={ProfileAvatar}
       />
       <textarea
-        name
-        id
         cols={30}
         rows={10}
         placeholder="What's happening?"
-        className="text-base font-regular w-full resize-none bg-transparent leading-normal text-neutral-50 placeholder:text-neutral-600 focus:outline-none"
+        className="font-regular w-full resize-none bg-transparent text-base leading-normal text-neutral-50 placeholder:text-neutral-600 focus:outline-none"
         value={tweetText}
-        onChange={handleTextChange}
+        onChange={(e) => setTweetText(e.target.value)}
       />
     </div>
   );

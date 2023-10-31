@@ -6,9 +6,16 @@ import Heart from "../assets/heart.svg";
 import Reach from "../assets/reach.svg";
 import Share from "../assets/share.svg";
 
-function Tweet(props) {
-  const { name, handle, time, tweetdata, comments, retweets, likes, reach } =
-    props;
+function Tweet({
+  name,
+  handle,
+  time,
+  tweetdata,
+  comments,
+  retweets,
+  likes,
+  reach,
+}) {
   return (
     <div className="box-border flex h-min border-b border-neutral-700 px-4 py-2">
       <div className="mr-4 h-12 min-w-fit">
@@ -30,7 +37,7 @@ function Tweet(props) {
             {tweetdata}
           </p>
         </div>
-        <div className="flex items-center justify-between lg:pr-5 py-3 text-neutral-500">
+        <div className="flex items-center justify-between py-3 text-neutral-500 lg:pr-5">
           <div className="flex items-center justify-between gap-0.3rem">
             <img src={Comment} />
             <span className="text-sm font-normal text-neutral-500">

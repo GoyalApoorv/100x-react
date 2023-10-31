@@ -1,11 +1,16 @@
+// import { useContext } from "react";
 import Header from "../components/Header";
 import LoginMain from "../components/Login/LoginMain";
+// import { TweetContext } from "../store";
 
 function Home() {
+  // const store = useContext(TweetContext);
+
   return (
-    <div className="h-screen flex flex-col">
+    <div className="flex h-screen flex-col">
       <Header />
-     <LoginMain />
+
+      <LoginMain />
     </div>
   );
 }
