@@ -14,7 +14,7 @@ function TweetMain() {
           <Text text="Join today." />
         </section>
         <Link to={URLs.signUpStep1}>
-          <Button variant="default" disabled={false}>
+          <Button variant="default" disabled={true}>
             Create account
           </Button>
         </Link>
@@ -28,7 +28,7 @@ function TweetMain() {
         <section className="flex flex-col gap-5">
           <Text text="Already have an account?" />
           <a href="#">
-            <Button variant="outline">Sign in</Button>
+            <Button variant="outline" >Sign in</Button>
           </a>
         </section>
       </section>
