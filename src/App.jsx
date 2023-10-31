@@ -6,15 +6,15 @@ import CreateAccountStep3 from "./pages/login/CreateAccountStep3";
 import CreateAccountStep4 from "./pages/login/CreateAccountStep4";
 import { Base } from "./pages/login/templates";
 import { URLs } from "./constants";
-import HomeF from "./pages/home-feed/Home";
-import UserProfile from "./pages/user-profile/UserProfile";
+import HomeFeed from "./pages/home-feed/Home";
+import Profile from "./pages/user-profile/UserProfile";
 import EditProfile from "./pages/user-profile/EditProfile";
 import ComposeTweet from "./pages/compose-tweet/ComposeTweet";
 
 const router = createBrowserRouter([
   {
     path: URLs.home,
-    element: <EditProfile />,
+    element: <Home />,
   },
   {
     path: URLs.signUpStep1,
@@ -50,11 +50,19 @@ const router = createBrowserRouter([
   },
   {
     path: URLs.feed,
-    element: (
-      <Base step="4">
-        <CreateAccountStep4 />
-      </Base>
-    ),
+    element: <HomeFeed />,
+  },
+  {
+    path: URLs.profile,
+    element: <Profile />,
+  },
+  {
+    path: URLs.edit,
+    element: <EditProfile />,
+  },
+  {
+    path: URLs.compose,
+    element: <ComposeTweet />,
   },
 ]);
 

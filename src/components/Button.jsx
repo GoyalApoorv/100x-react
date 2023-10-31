@@ -3,7 +3,7 @@ import PropTypes from "prop-types"; // ES6
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   size: PropTypes.oneOf(["sm", "full"]),
-  variant: PropTypes.oneOf(["default", "fill"]),
+  variant: PropTypes.oneOf(["default", "outline", "solid", "icon"]),
   type: PropTypes.oneOf(["primary", "secondary"]),
 };
 
@@ -12,7 +12,7 @@ function Button(props) {
     children = "Add your Text",
     variant = "default",
     type,
-    size = "sm",
+    size = "full",
     ...rest
   } = props;
 
@@ -39,7 +39,6 @@ function Button(props) {
     default: `w-full bg-neutral-50 text-neutral-1000 hover:bg-neutral-200 shadow-button backdrop-blur-xl disabled:cursor-not-allowed disabled:bg-neutral-50  disabled:opacity-50`,
     outline:
       " gap-2.5 border shadow-button border-solid border-button-stroke shadow-3xl backdrop-blur-23.66 text-center",
-
     solid:
       "w-[360px] gap-2.5  hover:bg-twitter-hover  bg-twitter-default p-5  text-neutral-50 py-5 disabled:bg-twitter-disabled hover:cursor-not-allowed",
   };

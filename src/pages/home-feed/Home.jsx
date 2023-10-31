@@ -1,14 +1,12 @@
 import Tweet from "../../components/Tweet";
-import HomeActive from "../../assets/home-active.svg";
-import HomeInactive from "../../assets/home-inactive.svg";
-import ProfileActive from "../../assets/profile-active.svg";
-import ProfileInactive from "../../assets/profile-inactive.svg";
+
 import Toast from "../../components/Toast";
 
 import NewTweet from "../../components/NewTweetButton";
 import Header from "../../components/Header";
 import Tab from "../../components/Tab";
 import ProfileAvatar from "../../components/Avatar";
+import Footer from "../../components/Footer";
 
 function Home() {
   return (
@@ -18,7 +16,6 @@ function Home() {
           <ProfileAvatar />
           <Header />
         </section>
-       
       </header>
       <Tab />
       <main className="flex w-full flex-col pb-20">
@@ -106,26 +103,7 @@ function Home() {
         <a href="../compose-tweet/index.html">
           <NewTweet />
         </a>
-        <footer className="fixed bottom-0 flex w-full items-center justify-center gap-10 border-t border-neutral-800 bg-neutral-1000 px-6 py-1.1rem">
-          <div className="group">
-            <button className="group-focus-within:hidden">
-              <img src={HomeActive} />
-            </button>
-            <button className="hidden group-focus-within:block">
-              <img src={HomeInactive} />
-            </button>
-          </div>
-          <a href="../user-profile/index.html">
-            <div className="group">
-              <button className="group-hover:hidden">
-                <img src={ProfileInactive} />
-              </button>
-              <button className="hidden group-hover:block">
-                <img src={ProfileActive} />
-              </button>
-            </div>
-          </a>
-        </footer>
+        <Footer page="home" />
       </main>
     </div>
   );

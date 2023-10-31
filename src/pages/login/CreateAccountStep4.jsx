@@ -19,7 +19,7 @@ function CreateAccountStep4() {
       </section>
 
       <Link
-        to={URLs.signUpStep4}
+        to={URLs.feed}
         className="fixed bottom-16 left-1/2 -translate-x-1/2 -translate-y-1/2 transform w-20.8rem"
       >
         <Button variant="default" disabled={false}>

@@ -1,18 +1,16 @@
-import BannerImage from "../../assets/banner-image.png";
 import ProfileAvatar from "../../assets/profile_avatar.png";
 import Button from "../../components/Button";
 import NewTweetButton from "../../components/NewTweetButton";
 import Tweet from "../../components/Tweet";
-
+import Banner from "../../components/Banner";
+import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
+import { URLs } from "../../constants";
 function UserProfile() {
   return (
     <div>
       <header className="w-full border-b border-neutral-700">
-        <img
-          className="w-full md:h-20.8rem"
-          src={BannerImage}
-          alt="Banner Image"
-        />
+        <Banner />
         <section className="relative px-4 pb-3 pt-2">
           {/* Profile Icon */}
           <img
@@ -21,11 +19,11 @@ function UserProfile() {
           />
           {/* Edit profile */}
           <div className="flex justify-end">
-            <a href="./edit-profile.html">
+            <Link to={URLs.edit}>
               <Button variant="outline" type="secondary">
                 Edit Profile
               </Button>
-            </a>
+            </Link>
           </div>
           <div className="flex flex-col gap-4">
             {/* Name */}
@@ -172,6 +170,7 @@ function UserProfile() {
           likes="1869"
           reach="69.9k"
         />
+        <Footer page="profile" />
       </main>
       <a href="../compose-tweet/index.html">
         <NewTweetButton />

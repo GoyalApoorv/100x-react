@@ -1,6 +1,7 @@
 import React from "react";
 
-function Tab() {
+function Tab(props) {
+  const { name, callback, active } = props;
   return (
     <div className="flex w-full flex-1 justify-around border-b border-b-neutral-700 bg-neutral-1000 backdrop-blur-md">
       <div className="flex w-full flex-col items-center hover:bg-neutral-800">

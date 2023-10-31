@@ -7,7 +7,7 @@ import { URLs } from "../../constants.js";
 
 function TweetMain() {
   return (
-    <main className="flex h-screen justify-center bg-neutral-1000 w-full items-center">
+    <main className="flex flex-grow justify-center bg-neutral-1000 w-full items-center">
       <section className="flex w-full flex-col gap-10 px-7">
         <section className="flex flex-col gap-3">
           <Heading>Happening now</Heading>
@@ -27,9 +27,11 @@ function TweetMain() {
         </div>
         <section className="flex flex-col gap-5">
           <Text text="Already have an account?" />
-          <a href="#">
-            <Button variant="outline">Sign in</Button>
-          </a>
+          <Link to={URLs.feed}>
+            <Button variant="outline" type="primary" size="full">
+              Sign in
+            </Button>
+          </Link>
         </section>
       </section>
     </main>

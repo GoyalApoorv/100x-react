@@ -3,10 +3,10 @@ import LoginMain from "../components/Login/LoginMain";
 
 function Home() {
   return (
-    <>
+    <div className="h-screen flex flex-col">
       <Header />
-      <LoginMain />
-    </>
+     <LoginMain />
+    </div>
   );
 }
 
