@@ -4,9 +4,13 @@ import TweetInput from "../../components/TweetInput";
 import { URLs } from "../../constants";
 import { useState } from "react";
 import Button from "../../components/Button";
+import { useContext } from "react";
+import { TweetContext } from "../../store";
 
 function ComposeTweet() {
-  const [tweets, setTweets] = useState([]);
+  const { userTweets, updateTweets } = useContext(TweetContext);
+  console.log(userTweets);
+
   const [tweetText, setTweetText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -23,18 +27,19 @@ function ComposeTweet() {
           onClick={async () => {
             setIsLoading(true);
             await new Promise((resolve) => setTimeout(resolve, 1000));
-            setTweets((c) => [
-              ...c,
+            console.log(userTweets);
+            updateTweets([
+              ...userTweets,
               {
                 tweetText,
-                id: Math.random().toString(36).substring(2, 9),
-                timestamp: Date.now(),
+                // id: Math.random().toString(36).substring(2, 9),
+                // timestamp: Date.now(),
               },
             ]);
+            console.log(userTweets);
             setIsLoading(false);
             setTweetText("");
           }}
-          // className="inline-flex w-5.2rem items-center justify-center gap-2.5 rounded-4xl bg-twitter-default px-6 py-3 hover:bg-twitter-hover disabled:opacity-50 md:w-13.8rem md:rounded-6xl md:px-5.8rem md:py-0.9rem"
         >
           <span className="text-center text-base font-bold not-italic leading-normal text-neutral-50">
             {isLoading ? "Loading..." : "Post"}
@@ -42,12 +47,13 @@ function ComposeTweet() {
         </Button>
         <button
           className="text-white"
-          onClick={() => console.log(`Tweets are :`, tweets)}
+          onClick={() => console.log(`Tweets are :`, userTweets)}
         >
           showTweet
         </button>
       </header>
       <TweetInput tweetText={tweetText} setTweetText={setTweetText} />
+
       <footer className="fixed bottom-0 flex items-center gap-5 px-4 py-3">
         <p className="text-sm font-normal leading-normal  text-neutral-500">
           0/280

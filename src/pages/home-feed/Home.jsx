@@ -7,9 +7,12 @@ import Header from "../../components/Header";
 import Tab from "../../components/Tab";
 import ProfileAvatar from "../../components/Avatar";
 import Footer from "../../components/Footer";
+import { TweetContext } from "../../store/index";
+import { useContext } from "react";
 
 function Home() {
-  
+  const tweets = useContext(TweetContext);
+  console.log(tweets.userTweets);
   return (
     <div className="bg-neutral-1000">
       <header className="top-0 flex w-full flex-col items-center bg-neutral-1000">
@@ -21,7 +24,24 @@ function Home() {
       <Tab />
       <main className="flex w-full flex-col pb-20">
         <section>
-          {/* Tweets */}
+          {(tweets.userTweets).map((tweet) => (
+            <Tweet
+              key={tweet.id}
+              name={tweet.name}
+              handle={tweet.handle}
+              time={tweet.time}
+              tweetdata={tweet.tweetdata}
+              comments={tweet.comments}
+              retweets={tweet.retweets}
+              likes={tweet.likes}
+              reach={tweet.reach}
+            />
+          ))}
+        </section>
+
+        {/* Tweets */}
+        {/* <section>
+          
           <Tweet
             name="Name"
             handle="handle"
@@ -99,7 +119,7 @@ function Home() {
             likes="1869"
             reach="69.9k"
           />
-        </section>
+        </section> */}
         <Toast message="Copied to clipboard." />
         <a href="../compose-tweet/index.html">
           <NewTweet />

@@ -69,7 +69,7 @@ const router = createBrowserRouter([
 
 export default function App() {
   return (
-    <TweetContext.Provider value={{ currentTweet: "Hello", userTweets: [] }}>
+    <TweetContext.Provider value={{ userTweets: ["1","2"], updateTweets: () => {} }}>
       <div className="bg-neutral-1000 ">
         <RouterProvider router={router} />
       </div>

@@ -1,5 +1,10 @@
-import { useState } from "react";
 import ProfileAvatar from "../assets/profile_avatar.png";
+import PropTypes from "prop-types"; // ES6
+
+TweetInput.propTypes = {
+  tweetText: PropTypes.string.isRequired,
+  setTweetText: PropTypes.func.isRequired,
+};
 
 function TweetInput({ tweetText, setTweetText }) {
   return (
@@ -14,7 +19,9 @@ function TweetInput({ tweetText, setTweetText }) {
         placeholder="What's happening?"
         className="font-regular w-full resize-none bg-transparent text-base leading-normal text-neutral-50 placeholder:text-neutral-600 focus:outline-none"
         value={tweetText}
-        onChange={(e) => setTweetText(e.target.value)}
+        onChange={(e) => {
+          setTweetText(e.target.value);
+        }}
       />
     </div>
   );

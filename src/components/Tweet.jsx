@@ -1,10 +1,21 @@
-import React from "react";
 import UserAvatar from "../assets/user-avatar.png";
 import Comment from "../assets/comment.svg";
 import Retweet from "../assets/retweet.svg";
 import Heart from "../assets/heart.svg";
 import Reach from "../assets/reach.svg";
 import Share from "../assets/share.svg";
+import PropTypes from "prop-types"; // ES6
+
+Tweet.propTypes = {
+  name: PropTypes.string.isRequired,
+  handle: PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired,
+  tweetdata: PropTypes.string.isRequired,
+  comments: PropTypes.string.isRequired,
+  retweets: PropTypes.string.isRequired,
+  likes: PropTypes.string.isRequired,
+  reach: PropTypes.string.isRequired,
+};
 
 function Tweet({
   name,
