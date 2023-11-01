@@ -24,13 +24,14 @@ function Home() {
       <Tab />
       <main className="flex w-full flex-col pb-20">
         <section>
-          {(tweets.userTweets).map((tweet) => (
+          {tweets.userTweets.map((tweet, index) => (
             <Tweet
-              key={tweet.id}
+              key={index}
+              id={tweet.id}
               name={tweet.name}
               handle={tweet.handle}
               time={tweet.time}
-              tweetdata={tweet.tweetdata}
+              tweetdata={tweet.tweetText}
               comments={tweet.comments}
               retweets={tweet.retweets}
               likes={tweet.likes}
@@ -121,9 +122,9 @@ function Home() {
           />
         </section> */}
         <Toast message="Copied to clipboard." />
-        <a href="../compose-tweet/index.html">
-          <NewTweet />
-        </a>
+
+        <NewTweet />
+
         <Footer page="home" />
       </main>
     </div>

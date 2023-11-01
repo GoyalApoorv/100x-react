@@ -14,7 +14,7 @@ function UserProfile() {
         <section className="relative px-4 pb-3 pt-2">
           {/* Profile Icon */}
           <img
-            className="w-4.2rem h-4.2rem absolute -top-8 rounded-7xl border-4 border-neutral-1000"
+            className="absolute -top-8 h-4.2rem w-4.2rem rounded-7xl border-4 border-neutral-1000"
             src={ProfileAvatar}
           />
           {/* Edit profile */}
@@ -172,9 +172,8 @@ function UserProfile() {
         />
         <Footer page="profile" />
       </main>
-      <a href="../compose-tweet/index.html">
-        <NewTweetButton />
-      </a>
+
+      <NewTweetButton />
     </div>
   );
 }

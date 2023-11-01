@@ -2,7 +2,7 @@ import PropTypes from "prop-types"; // ES6
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  size: PropTypes.oneOf(["sm", "full"]),
+  size: PropTypes.oneOf(["sm", "full", "md"]),
   variant: PropTypes.oneOf(["default", "outline", "solid", "icon"]),
   type: PropTypes.oneOf(["primary", "secondary"]),
 };

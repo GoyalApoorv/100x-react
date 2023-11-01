@@ -7,6 +7,7 @@ import Share from "../assets/share.svg";
 import PropTypes from "prop-types"; // ES6
 
 Tweet.propTypes = {
+  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   handle: PropTypes.string.isRequired,
   time: PropTypes.string.isRequired,
@@ -18,17 +19,21 @@ Tweet.propTypes = {
 };
 
 function Tweet({
+  id,
   name,
   handle,
   time,
   tweetdata,
-  comments,
-  retweets,
-  likes,
-  reach,
+  comments = 0,
+  retweets = 0,
+  likes = 0,
+  reach = 0,
 }) {
   return (
-    <div className="box-border flex h-min border-b border-neutral-700 px-4 py-2">
+    <div
+      data-tweet-id={id}
+      className="box-border flex h-min border-b border-neutral-700 px-4 py-2"
+    >
       <div className="mr-4 h-12 min-w-fit">
         <img
           src={UserAvatar}
