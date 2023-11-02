@@ -1,9 +1,4 @@
 import { createContext, useState } from "react";
-
-const defaultData = {
-  userTweets: [],
-  setUserTweets: () => {},
-};
 export const TweetContext = createContext();
 
 export const TweetProvider = ({ children }) => {

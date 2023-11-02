@@ -7,7 +7,8 @@ import Header from "../../components/Header";
 import Tabs from "../../components/Tabs";
 import ProfileAvatar from "../../components/Avatar";
 import Footer from "../../components/Footer";
-import { TweetContext } from "../../store/index";
+import { TweetContext } from "../../contexts/index";
+
 import { useContext } from "react";
 
 function Home() {

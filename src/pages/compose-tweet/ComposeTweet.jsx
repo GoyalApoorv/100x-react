@@ -5,7 +5,7 @@ import { URLs } from "../../constants";
 import { useState } from "react";
 import Button from "../../components/Button";
 import { useContext } from "react";
-import { TweetContext } from "../../store";
+import { TweetContext } from "../../contexts";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
