@@ -14,7 +14,7 @@ function CreateAccountStep3() {
           <p className="text-sm font-normal leading-normal text-neutral-500">
             Enter it below to verify janedoe@gmail.com
           </p>
-          <Fieldset text="Verification code" type="text" />
+          <Fieldset required text="Verification code" type="text" />
           <p className="flex justify-end text-sm font-normal leading-normal text-twitter-default">
             Didn’t receive a code?
           </p>

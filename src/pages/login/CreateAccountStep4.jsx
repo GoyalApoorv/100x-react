@@ -14,7 +14,7 @@ function CreateAccountStep4() {
           <p className="text-sm font-normal leading-normal text-neutral-500">
             Make sure it’s 8 characters or more
           </p>
-          <Fieldset text="Password" type="password" />
+          <Fieldset required text="Password" type="password" />
         </div>
       </section>
 

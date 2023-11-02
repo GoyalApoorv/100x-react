@@ -13,9 +13,10 @@ export const TweetProvider = ({ children }) => {
 
 const SampleTweets = [
   {
-    id: "37164922154371394",
-    name: "Name",
-    handle: "handle",
+    id: "ajinkyabodke",
+    name: "Ajinkya B",
+    handle: "ajinkyabodke",
+    time: "12h",
     timestamp: "10h",
     tweetText: "Don't wish for it, work for it.",
     comments: "11",

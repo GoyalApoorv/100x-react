@@ -45,7 +45,7 @@ function CreateAccountStep1() {
           required
           text="Name"
           type="text"
-          minLength={1}
+          minLength={2}
           inputValue={inputValues.name}
           onInputChange={(value) => handleInputChange("name", value)}
         />

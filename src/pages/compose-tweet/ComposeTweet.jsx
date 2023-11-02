@@ -33,7 +33,7 @@ function ComposeTweet() {
           size="md"
           onClick={async () => {
             setIsLoading(true);
-            await new Promise((resolve) => setTimeout(resolve, 1000));
+            await new Promise((resolve) => setTimeout(resolve, 300));
             console.log(userTweets);
             setUserTweets([
               ...userTweets,
@@ -49,7 +49,7 @@ function ComposeTweet() {
             setTweetText("");
           }}
         >
-          <span className="text-center text-base font-bold not-italic leading-normal text-neutral-50">
+          <span className="text-center text-base font-bold not-italic leading-normal text-neutral-50 whitespace-nowrap">
             {isLoading ? "Posting..." : "Post"}
           </span>
         </Button>
