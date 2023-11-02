@@ -6,9 +6,14 @@ import { useState } from "react";
 import Button from "../../components/Button";
 import { useContext } from "react";
 import { TweetContext } from "../../store";
+import { useNavigate } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
+
 const tweetLimit = 280;
 
 function ComposeTweet() {
+  const navigate = useNavigate();
+
   const { userTweets, setUserTweets } = useContext(TweetContext);
 
   const [tweetText, setTweetText] = useState("");
@@ -17,14 +22,13 @@ function ComposeTweet() {
   const isTweetExceedingLimit = tweetText.length > tweetLimit;
 
   return (
-    <div className="w-full max-w-2xl grow mx-auto border-x-4">
+    <div>
       <header className="flex items-center justify-between  px-4 py-3">
-        <Link to={URLs.feed}>
+        <button onClick={() => navigate(-1)}>
           <img src={Cancel} />
-        </Link>
-
+        </button>
         <Button
-          disabled={isTweetExceedingLimit}
+          disabled={isTweetExceedingLimit || tweetText.trim() === ""}
           variant="solid"
           size="md"
           onClick={async () => {
@@ -35,11 +39,12 @@ function ComposeTweet() {
               ...userTweets,
               {
                 tweetText,
-                id: Math.random().toString(36).substring(2, 9),
+                id: uuidv4(),
                 timestamp: Date.now(),
               },
             ]);
             console.log(userTweets);
+            navigate(URLs.feed);
             setIsLoading(false);
             setTweetText("");
           }}

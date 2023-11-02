@@ -4,7 +4,7 @@ import Toast from "../../components/Toast";
 
 import NewTweet from "../../components/NewTweetButton";
 import Header from "../../components/Header";
-import Tab from "../../components/Tab";
+import Tabs from "../../components/Tabs";
 import ProfileAvatar from "../../components/Avatar";
 import Footer from "../../components/Footer";
 import { TweetContext } from "../../store/index";
@@ -21,7 +21,7 @@ function Home() {
           <Header />
         </section>
       </header>
-      <Tab />
+      <Tabs />
       <main className="flex w-full flex-col pb-20">
         <section>
           {tweets.userTweets.map((tweet, index) => (

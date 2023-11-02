@@ -1,6 +1,6 @@
 import React from "react";
 
-function Tab(props) {
+function Tabs(props) {
   const { name, callback, active } = props;
   return (
     <div className="flex w-full flex-1 justify-around border-b border-b-neutral-700 bg-neutral-1000 backdrop-blur-md">
@@ -41,4 +41,4 @@ function Tab(props) {
   );
 }
 
-export default Tab;
+export default Tabs;
