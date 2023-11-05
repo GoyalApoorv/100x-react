@@ -69,7 +69,7 @@ const DatePicker = ({ handleInputChange }) => {
             handleInputChange("year", +e.target.value);
           }}
           defaultValue={currentYear}
-          className="bg-transparenttext-neutral-50 w-full bg-neutral-1000 placeholder:text-neutral-500 focus:outline-none"
+          className="w-full bg-neutral-1000 bg-transparent  text-neutral-50 placeholder:text-neutral-500 focus:outline-none"
         >
           {YEARS.map((y, i) => {
             return (
