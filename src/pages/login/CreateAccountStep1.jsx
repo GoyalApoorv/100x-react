@@ -16,7 +16,7 @@ function CreateAccountStep1() {
     email: "",
     day: 1,
     month: 0,
-    year: 2000,
+    year: 2023,
   });
   const handleInputChange = (field, value) => {
     setInputValues((c) => {
