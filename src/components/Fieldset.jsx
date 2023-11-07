@@ -1,7 +1,6 @@
-// @ts-check
+
 import { useState } from "react";
 import PasswordEye from "../assets/password-eye.svg";
-import HidePassword from "../assets/eye-slash-regular.svg";
 import PropTypes from "prop-types"; // ES6
 
 Fieldset.propTypes = {
@@ -34,11 +33,11 @@ function Fieldset({ text, type, inputValue, onInputChange, ...rest }) {
       {type === "password" && (
         <button
           onClick={togglePasswordVisibility}
-          className="group aspect-square h-max w-max rounded-full bg-transparent p-2 hover:brightness-125"
+          className="group aspect-square h-max w-max rounded-full bg-transparent hover:brightness-125"
         >
           {showPassword ? (
             <svg
-              className="h-5 fill-slate-100"
+              className="h-4 fill-slate-400"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 640 512"
             >

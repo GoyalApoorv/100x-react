@@ -1,6 +1,6 @@
 import Tweet from "../../components/Tweet";
 
-import Toast from "../../components/Toast";
+// import Toast from "../../components/Toast";
 
 import NewTweet from "../../components/NewTweetButton";
 import Header from "../../components/Header";
@@ -33,7 +33,7 @@ function Home() {
               id={tweet.id}
               name={tweet.name}
               handle={tweet.handle}
-              time={tweet.time}
+              postedAt={tweet.postedAt}
               tweetdata={tweet.tweetText}
               comments={tweet.comments}
               retweets={tweet.retweets}

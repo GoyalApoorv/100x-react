@@ -7,13 +7,14 @@ import Share from "../assets/share.svg";
 import PropTypes from "prop-types"; // ES6
 // import Icon from "./Icon";
 import Comment from "../assets/comment.svg";
+import { getRelativeTime } from "../lib/utils";
 
 Tweet.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   handle: PropTypes.string.isRequired,
-  time: PropTypes.string.isRequired,
-  tweetdata: PropTypes.string.isRequired,
+  postedAt: PropTypes.number.isRequired,
+  tweetText: PropTypes.string.isRequired,
   comments: PropTypes.string.isRequired,
   retweets: PropTypes.string.isRequired,
   likes: PropTypes.string.isRequired,
@@ -24,8 +25,8 @@ function Tweet({
   id = "ajinkyabodke",
   name = "Ajinkya B",
   handle = "ajinkyabodke",
-  time = "12h",
-  tweetdata,
+  postedAt = "12h" ,
+  tweetText,
   comments = 0,
   retweets = 0,
   likes = 0,
@@ -49,10 +50,10 @@ function Tweet({
             <span className="text-base font-medium">{name}</span>
             <span className="text-neutral-500">@{handle}</span>
             <span className="text-neutral-500">•</span>
-            <span className="text-neutral-500">{time}</span>
+            <span className="text-neutral-500">{postedAt}</span>
           </div>
           <p className="font-regular text-0.9rem text-neutral-50">
-            {tweetdata}
+            {tweetText}
           </p>
         </div>
         <div className="flex items-center justify-between py-3 text-neutral-500 lg:pr-5">
