@@ -7,14 +7,13 @@ import Share from "../assets/share.svg";
 import PropTypes from "prop-types"; // ES6
 // import Icon from "./Icon";
 import Comment from "../assets/comment.svg";
-import { useContext } from 'react';
-import { UserContext } from '../contexts/UserContext';
+
 import { getRelativeTime } from "../lib/utils";
 
 Tweet.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  handle: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired,
   postedAt: PropTypes.number.isRequired,
   tweetText: PropTypes.string.isRequired,
   comments: PropTypes.string.isRequired,
@@ -25,9 +24,11 @@ Tweet.propTypes = {
 
 
 function Tweet({
-  id = "",
-  tweetText,
+  id,
+  name,
+  username,
   postedAt,
+  tweetText,
   comments = 0,
   retweets = 0,
   likes = 0,
@@ -35,9 +36,6 @@ function Tweet({
 }) 
 
 { 
-
-  const formValues = useContext(UserContext);
-  const userData = formValues.formData;
   console.log(postedAt);
   return (
     <div
@@ -54,8 +52,8 @@ function Tweet({
       <div className="w-full">
         <div className="mb-1">
           <div className="mb-1 text-neutral-50 flex gap-1">
-            <span className="text-base font-medium">{userData.name}</span>
-            <span className="text-neutral-500">@{userData.name.replace(/\s/g, '').toLowerCase()}</span>
+            <span className="text-base font-medium">{name}</span>
+            <span className="text-neutral-500">@{username}</span>
             <span className="text-neutral-500">•</span>
             <span className="text-neutral-500">{getRelativeTime(postedAt)}</span>
           </div>

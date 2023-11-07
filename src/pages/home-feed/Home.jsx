@@ -30,15 +30,7 @@ function Home() {
           {tweetsData.map((tweet, index) => (
             <Tweet
               key={index}
-              id={tweet.id}
-              name={tweet.name}
-              handle={tweet.handle}
-              postedAt={tweet.postedAt}
-              tweetText={tweet.tweetText}
-              comments={tweet.comments}
-              retweets={tweet.retweets}
-              likes={tweet.likes}
-              reach={tweet.reach}
+             {...tweet}
             />
           ))}
         </section>

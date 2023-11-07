@@ -21,7 +21,7 @@ const SampleTweets = [
   {
     id: "1",
     name: "Ajinkya B",
-    handle: "ajinkyabodke",
+    username: "ajinkyabodke",
     postedAt: "1699355379971",
     tweetText: "Don't wish for it, work for it.",
     comments: 11,
