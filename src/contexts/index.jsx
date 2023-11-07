@@ -19,7 +19,7 @@ TweetProvider.propTypes = {
 
 const SampleTweets = [
   {
-    id: "ajinkyabodke",
+    id: "1",
     name: "Ajinkya B",
     handle: "ajinkyabodke",
     postedAt: "12h",

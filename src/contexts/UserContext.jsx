@@ -9,8 +9,9 @@ const sampleUserData = {
   password: "",
   username: "",
   id:"",
-  
   bio:"Full Stack Developer👨‍💻",
+  website: "https://ajinkyabodke.com/",
+  location: "India",
 };
 
 export const UserContext = createContext();

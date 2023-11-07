@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import { TweetContext } from "../../contexts/index";
 import { useContext } from "react";
 import ProfileHeader from "../../components/ProfileHeader";
+
 function UserProfile() {
   const tweets = useContext(TweetContext);
   const tweetsData = [...tweets.userTweets].reverse();

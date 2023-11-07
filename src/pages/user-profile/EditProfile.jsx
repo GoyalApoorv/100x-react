@@ -7,8 +7,12 @@ import Banner from "../../components/Banner";
 import Fieldset from "../../components/Fieldset";
 import { Link } from "react-router-dom";
 import { URLs } from "../../constants";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 
 function EditProfile() {
+  const formValues = useContext(UserContext);
+  const userData = formValues.formData;
   return (
     <div className="px-4">
       <header className="flex flex-col items-start gap-3">
@@ -41,10 +45,10 @@ function EditProfile() {
           src={ProfileAvatar}
         />
         <section className="relative flex flex-col items-center gap-5 self-stretch pt-5">
-          <Fieldset text="Name" type="text" />
-          <Fieldset text="Bio" type="text" />
-          <Fieldset text="Location" type="text" />
-          <Fieldset text="Website" type="text" />
+          <Fieldset text="Name" value={userData.name} type="text" />
+          <Fieldset text="Bio" value={userData.bio} type="text" />
+          <Fieldset text="Location" value={userData.location} type="text" />
+          <Fieldset text="Website" value={userData.website} type="text" />
         </section>
       </main>
     </div>

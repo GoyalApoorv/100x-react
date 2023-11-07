@@ -10,8 +10,8 @@ import { useContext } from 'react';
 import { UserContext } from '../contexts/UserContext';
 
 function ProfileHeader() {
-  const userData = useContext(UserContext);
-  const formValues = userData.formData;
+  const formValues = useContext(UserContext);
+  const userData = formValues.formData;
   return (
     <header className="w-full border-b border-neutral-700">
     <Banner />
@@ -33,15 +33,15 @@ function ProfileHeader() {
         {/* Name */}
         <div className="flex flex-col items-start justify-end gap-1">
           <h1 className="text-xl font-bold leading-normal text-neutral-50">
-           {formValues.name}
+           {userData.name}
           </h1>
           <h2 className="text-0.9rem font-normal leading-normal text-neutral-500">
-          {`@${formValues.name.replace(/\s/g, '').toLowerCase()}`}
+          {`@${userData.name.replace(/\s/g, '').toLowerCase()}`}
           </h2>
         </div>
         {/* Bio */}
         <div className="text-base font-normal leading-normal text-neutral-50">
-        {formValues.bio}
+        {userData.bio}
         </div>
         {/* Links */}
         <div className="flex flex-shrink items-start gap-5">
@@ -51,17 +51,17 @@ function ProfileHeader() {
               rel="noreferrer"
               target="_blank"
               className="max-w-[140px] flex-wrap truncate text-base font-normal leading-normal text-twitter-default lg:hidden"
-              href="https://ajinkyabodke.netlify.app/"
+              href={userData.website}
             >
-              ajinkyabodke.netlify.app
+              {userData.website}
             </a>
             <a
               rel="noreferrer"
               target="_blank"
               className="hidden text-base font-normal leading-normal text-twitter-default lg:flex"
-              href="https://ajinkyabodke.netlify.app/"
+              href={userData.website}
             >
-              ajinkyabodke.netlify.app
+              ajinkyabodke.com
             </a>
           </div>
           <div className="flex items-center gap-1">
