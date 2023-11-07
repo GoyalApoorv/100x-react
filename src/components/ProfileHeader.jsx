@@ -36,7 +36,7 @@ function ProfileHeader() {
            {formData.name}
           </h1>
           <h2 className="text-0.9rem font-normal leading-normal text-neutral-500">
-          {`@${formData.name.replace(/\s/g, '').toLowerCase()}`}
+          {/* {`@${formData.name.replace(/\s/g, '').toLowerCase()}`} */}
           </h2>
         </div>
         {/* Bio */}
@@ -61,7 +61,7 @@ function ProfileHeader() {
               className="hidden text-base font-normal leading-normal text-twitter-default lg:flex"
               href={formData.website}
             >
-           {formData.website.replace(/^https:\/\//, '').replace(/\/$/, '')}
+           {/* {formData.website.replace(/^https:\/\//, '').replace(/\/$/, '')} */}
             </a>
           </div>
           <div className="flex items-center gap-1">

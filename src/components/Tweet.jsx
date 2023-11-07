@@ -23,7 +23,6 @@ Tweet.propTypes = {
 };
 
 
-
 function Tweet({
   id = "",
   tweetText,

@@ -34,7 +34,7 @@ function Home() {
               name={tweet.name}
               handle={tweet.handle}
               postedAt={tweet.postedAt}
-              tweetdata={tweet.tweetText}
+              tweetText={tweet.tweetText}
               comments={tweet.comments}
               retweets={tweet.retweets}
               likes={tweet.likes}
