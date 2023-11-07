@@ -40,7 +40,7 @@ function ComposeTweet() {
               {
                 tweetText,
                 id: uuidv4(),
-                timestamp: Date.now(),
+                postedAt: Date.now(),
               },
             ]);
             console.log(userTweets);

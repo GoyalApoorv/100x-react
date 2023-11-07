@@ -9,6 +9,7 @@ import PropTypes from "prop-types"; // ES6
 import Comment from "../assets/comment.svg";
 import { useContext } from 'react';
 import { UserContext } from '../contexts/UserContext';
+import { getRelativeTime } from "../lib/utils";
 
 Tweet.propTypes = {
   id: PropTypes.string.isRequired,
@@ -26,16 +27,18 @@ Tweet.propTypes = {
 function Tweet({
   id = "",
   tweetText,
+  postedAt,
   comments = 0,
   retweets = 0,
   likes = 0,
   reach = 0,
 }) 
 
-{
+{ 
 
   const formValues = useContext(UserContext);
   const userData = formValues.formData;
+  console.log(postedAt);
   return (
     <div
       data-tweet-id={id}
@@ -54,7 +57,7 @@ function Tweet({
             <span className="text-base font-medium">{userData.name}</span>
             <span className="text-neutral-500">@{userData.name.replace(/\s/g, '').toLowerCase()}</span>
             <span className="text-neutral-500">•</span>
-            <span className="text-neutral-500">{userData.postedAt}</span>
+            <span className="text-neutral-500">{getRelativeTime(postedAt)}</span>
           </div>
           <p className="font-regular text-0.9rem text-neutral-50">
             {tweetText}
