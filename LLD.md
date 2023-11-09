@@ -138,3 +138,9 @@ Define the tailwing config file to define the default palette and styling guidel
 
 Unified code standards ensure maintainability and ease of understanding.
 
+User Context - ![User Context](/public/image3.png)
+
+Tweet Context - ![Tweet Context](/public/image2.png)
+
+Diagram -` https://excalidraw.com/#room=ccbcbf6dd274f5ec902c,t4bGFXY4nxAkOvwwDYKcJA`
+![Diagram](/public/image.png)
