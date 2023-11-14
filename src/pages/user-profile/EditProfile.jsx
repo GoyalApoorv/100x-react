@@ -103,7 +103,7 @@ function EditProfile() {
         <section className="flex items-center justify-between self-stretch py-3">
           <div className="flex items-center gap-5">
             <Link to={URLs.profile}>
-              <img src={BackArrow} />
+              <img alt="back" src={BackArrow} />
             </Link>
             <p className="text-base font-bold leading-normal text-neutral-50">
               Edit profile
@@ -118,14 +118,15 @@ function EditProfile() {
         <div className="relative flex w-full">
           <Banner />
           <div className="absolute flex h-full w-full items-center justify-center gap-2">
-            <img src={AddImageIcon} />
-            <img src={CancelIcon} />
+            <img alt="add image" src={AddImageIcon} />
+            <img alt="cancel" src={CancelIcon} />
           </div>
         </div>
       </header>
       <main className="relative">
         {/* Profile Icon */}
         <img
+          alt="profile_avatar"
           className="absolute -top-12 left-1 h-4.2rem w-4.2rem rounded-7xl border-4 border-neutral-1000"
           src={ProfileAvatar}
         />
