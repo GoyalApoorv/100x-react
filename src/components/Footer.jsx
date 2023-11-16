@@ -22,7 +22,7 @@ function Footer({ page }) {
       <Link to={URLs.profile}>
         <img
           alt="home-button"
-          src={page === "home" ? HomeActive : HomeInactive}
+          src={page === "home" ? ProfileInactive : ProfileActive}
         />{" "}
       </Link>
     </footer>
