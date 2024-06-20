@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 100x - Microblogging Platform
 
 
@@ -146,3 +147,6 @@ Tweet Context - ![Tweet Context](/public/tweet-context.png)
 
 User Context - ![User Context](/public/user-context.png)
 
+=======
+# 100x-react
+>>>>>>> 50eb6ff7d92292f767d8dd9b3a89dac1ce90b2b4
