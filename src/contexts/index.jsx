@@ -19,10 +19,10 @@ TweetProvider.propTypes = {
 const SampleTweets = [
   {
     id: "1",
-    name: "Ajinkya B",
-    username: "ajinkyabodke",
+    name: "Apoorv Goyal",
+    username: "apoorvgoyal",
     postedAt: 1699355379971,
-    tweetText: "Join us on 100X because on a scale of 1 to X, we're 100X !",
+    tweetText: "You miss 100% of the shots you don't take.",
     comments: 11,
     retweets: 269,
     likes: 1869,
@@ -32,10 +32,10 @@ const SampleTweets = [
   },
   {
     id: "2",
-    name: "Ajinkya B",
-    username: "ajinkyabodke",
+    name: "Apoorv Goyal",
+    username: "apoorvgoyal",
     postedAt: 1699363303000,
-    tweetText: "X is where you started, but 100X is where you'll thrive.",
+    tweetText: "Setting up 100x",
     comments: 11,
     retweets: 299,
     likes: 189,

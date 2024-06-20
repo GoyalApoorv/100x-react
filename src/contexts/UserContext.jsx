@@ -12,15 +12,15 @@ export const UserProvider = ({ children }) => {
   );
 };
 const sampleUserData = {
-  name: "Ajinkya Bodke",
+  name: "Apoorv Goyal",
   email: "",
-  month: 0,
-  day: 1,
-  year: 2001,
+  month: 1,
+  day: 4,
+  year: 2002,
   password: "",
   username: "",
   id: "",
   bio: "Full Stack Developer👨‍💻",
-  website: "https://ajinkyabodke.com/",
+  website: "apoorvgoyal.co.in",
   location: "India",
 };

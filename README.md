@@ -1,6 +1,6 @@
 # 100x - Microblogging Platform
 
-https://100x-site.vercel.app/
+
 
 ## Frontend Low-Level Design
 
@@ -146,5 +146,3 @@ Tweet Context - ![Tweet Context](/public/tweet-context.png)
 
 User Context - ![User Context](/public/user-context.png)
 
-Diagram -` https://excalidraw.com/#room=ccbcbf6dd274f5ec902c,t4bGFXY4nxAkOvwwDYKcJA`
-![Diagram](/public/image.png)

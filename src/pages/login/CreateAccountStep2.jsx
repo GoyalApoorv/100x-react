@@ -5,14 +5,33 @@ import StepHeading from "../../components/StepHeading";
 import { URLs } from "../../constants";
 import { UserContext } from "../../contexts/UserContext";
 import { useContext } from "react";
-import { MONTHS } from "../../components/DatePicker";
+import { useState } from "react";
+import { supabase } from "../../supabase"; // Import Supabase client instance
 
 function CreateAccountStep2() {
   const userData = useContext(UserContext);
   const formValues = userData.formData;
-  const DOB = `${formValues.day} ${MONTHS[formValues.month]} ${
-    formValues.year
-  }`;
+  const DOB = `${formValues.day} ${MONTHS[formValues.month]} ${formValues.year}`;
+  const [error, setError] = useState(null);
+
+  // Function to handle signup using Supabase
+  const handleSignUp = async () => {
+    try {
+      const { user, error } = await supabase.auth.signUp({
+        email: formValues.email,
+        password: 'password', // Set a default password for signup (you can customize this)
+      });
+      if (error) {
+        throw error;
+      }
+      console.log('User signed up successfully:', user);
+      // Redirect to the next step after signup
+      window.location.href = URLs.signUpStep3; // Assuming URLs.signUpStep3 is your next step URL
+    } catch (error) {
+      console.error('Error signing up:', error.message);
+      setError(error.message);
+    }
+  };
 
   return (
     <>
@@ -25,15 +44,13 @@ function CreateAccountStep2() {
         </div>
       </section>
 
-      <Link
-        to={URLs.signUpStep3}
-        className="fixed bottom-16 left-1/2 w-20.8rem -translate-x-1/2 -translate-y-1/2 transform"
-      >
-        <Button variant="solid" size="full" disabled={false}>
-          Sign up
-        </Button>
-      </Link>
+      <Button variant="solid" size="full" onClick={handleSignUp} disabled={false}>
+        Sign up
+      </Button>
+
+      {error && <p className="text-red-500">{error}</p>}
     </>
   );
 }
+
 export default CreateAccountStep2;
