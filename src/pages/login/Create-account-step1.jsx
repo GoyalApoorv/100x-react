@@ -1,5 +1,5 @@
 import Logo from '../../assets/100x-logo.svg'
-import Button from '../../components/button.jsx'
+import Button from '../../components/Button.jsx'
 
 
 // Header
